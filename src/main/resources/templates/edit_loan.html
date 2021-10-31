@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>MAENDELEO COMMUNITY BANK</title>
+        <link href="webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+   <div>
+    <div align="center">
+        <h1>Loan Application Form</h1>
+        <br />
+        <form action="#" th:action="@{/save}" th:object="${product}"
+            method="post">
+      <input type="hidden" th:field="*{id}" readonly="readonly" />
+            <table border="1" width="100%" cellpadding="3">
+             <th>A. PERSONAL PARTICULARS</th>
+                <tr><td>Membership No:</td><td><input type="text" th:field="*{membershipno}" /></td>
+                <td>First Name:</td><td><input type="text" th:field="*{firstname}" /></td> </tr>
+                <tr><td>Middle Name:</td><td><input type="text" th:field="*{middlename}" /></td>
+                <td>ID No./ Passport No.:</td><td><input type="text" th:field="*{idno}" /></td></tr>  
+                 <tr><td>Date of Birth:</td><td><input type="text" th:field="*{dob}" /></td>     
+                 <td>Home address:</td> <td><input type="text" th:field="*{homeaddress}" /></td></tr>   
+                 <tr><td>Office Tel No:</td><td><input type="text" th:field="*{officetel}" /></td>  
+                 <td>Mobile No.:</td><td><input type="text" th:field="*{mobileno}" /></td></tr>
+                 <tr><td>Pin No.</td><td><input type="text" th:field="*{pinno}" /></td>
+                 <td>Email:</td><td><input type="text" th:field="*{email}" /></td> </tr>
+                <tr> <td>Physical Address:</td><td><input type="text" th:field="*{physicaladdress}" /></td>                
+                 <td>Town:</td><td><input type="text" th:field="*{town}" /></td></tr>
+               <tr> <td>Estate:</td><td><input type="text" th:field="*{estate}" /></td>
+                 <td>Street & Hse. No</td><td><input type="text" th:field="*{street}" /></td></tr>
+                <tr><td>How long have you lived there?</td>
+                 <td><input type="text" th:field="*{duration}" /></td>
+                 <td>Rented/Owned?</td><td><input type="text" th:field="*{ownership}" /></td></tr>
+                  <tr> <td>Marital status</td>
+                    <td><input type="text" th:field="*{maritalstatus}" /></td>
+                    <td>No. of dependents:</td>
+                    <td><input type="text" th:field="*{dependents}" /></td></tr>
+                </tr>
+            </table>
+            </br>
+             <table border="1" width="100%" cellpadding="3">
+               <th>B. EMPLOYMENT DETAILS</th> 
+                <tr><td>Applicant’s Employer:</td><td><input type="text" th:field="*{employer}" /></td></tr>
+                <tr><td>Physical Address:</td><td><input type="text" th:field="*{ephysicaladdress}" /></td></tr>
+                <tr><td>Postal Address:</td><td><input type="text" th:field="*{epostaladdress}" /></td></tr>
+                <tr><td>Tel:</td><td><input type="text" th:field="*{etelephone}" /></td></tr>
+                <tr><td>Designation:</td><td><input type="text" th:field="*{designation}" /></td></tr>
+                <tr><td>Staff No:</td><td><input type="text" th:field="*{staffno}" /></td> </tr>
+                <tr><td>Employment terms: </td><td><input type="text" th:field="*{eterms}" /></td></tr>
+                <tr><td>Type of business:</td> <td><input type="text" th:field="*{business}" /></td></tr>
+                <tr><td>Years of operation:</td><td><input type="text" th:field="*{operation}" /></td> </tr>
+             </table >
+            </br>
+             <table border="1" width="100%" cellpadding="3">
+                <th>C. BANK DETAILS </th> 
+                 <tr><td>Account Name:</td><td><input type="text" th:field="*{accountname}" /></td></tr>
+                 <tr><td>Account No:</td><td><input type="text" th:field="*{accountno}" /></td> </tr>
+                 <tr><td>Bank: </td><td><input type="text" th:field="*{bankname}" /></td></tr>
+                 <tr><td>Branch: </td><td><input type="text" th:field="*{bankbranch}" /></td> </tr>
+                 <tr><td>Bank Code:</td> <td><input type="text" th:field="*{bankcode}" /></td> </tr>
+             </table >
+             </br>
+             <table border="1" width="100%" cellpadding="3">
+                <th>D. LOAN PARTICULARS</th>
+                <tr><td>LOAN TYPE:</td><td><input type="text" th:field="*{loantype}" /></td></tr>
+                <tr><td>Purpose of loan :</td><td><input type="text" th:field="*{purpose}" /></td></tr>
+                <tr><td>Amount applied for: </td><td><input type="text" th:field="*{amount}" /></td></tr>
+             </table > 
+             <table>                  
+                <tr>
+                    <td colspan="2"><button type="submit">Update</button> </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+   </div>
+</body>
+</html>
